@@ -1,18 +1,13 @@
-import { Dispatch, SetStateAction, useState } from 'react';
-interface AddListProps {
-  setList: Dispatch<SetStateAction<{}>>;
-}
+import { useState } from 'react';
+interface AddListProps {}
 
-const AddList = ({ setList }: AddListProps) => {
+const AddList = () => {
   const [title, setTitle] = useState<String>('');
   const [task, setTask] = useState<String>('');
 
+  // todo add dispatch
   const addListEvent = () => {
-    setList({
-      title: title,
-      task: task,
-      isDone: false,
-    });
+    console.log('jel');
   };
 
   return (

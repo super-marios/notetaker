@@ -6,7 +6,18 @@ import {
 } from './types'
 
 const initialState: ListState = {
-  lists: []
+  lists: [{
+    id: 1,
+    title: 'Sample',
+    task: 'This is a sample',
+    isDone : false
+  },
+  {
+    id: 2,
+    title: 'Sample2',
+    task: 'This is a sample2',
+    isDone : true
+  }]
 }
 
 export function listReducer(
