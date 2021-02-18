@@ -12,6 +12,10 @@ interface ShowListProps {
 const ShowList = () => {
   const lists = useSelector((state: ShowListProps) => state.lists);
 
+  const handleCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value);
+  };
+
   return (
     <ShowListStyle>
       {lists.map((el, i) => {
@@ -32,7 +36,11 @@ const ShowList = () => {
             </div>
             <div>
               <span>COMPLETED</span>
-              <input type='checkbox' checked={el.isDone} />
+              <input
+                type='checkbox'
+                checked={el.isDone}
+                onChange={handleCheckbox}
+              />
             </div>
           </div>
         );
